@@ -1,0 +1,17 @@
+body#login{
+    background-color: rgb(39, 39, 39);
+    background-image: url("../img/background.png");
+    background-repeat: repeat;
+}
+
+#logo-row{
+    padding-top: 20%;
+    padding-bottom: 2%;
+}
+
+#logo-img{
+    max-width: 50%;
+    background-color: rgb(17, 17, 17) !important;
+    border-radius: 25px;
+    padding: .5%;
+}
