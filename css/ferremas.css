@@ -15,3 +15,33 @@ body#login{
     border-radius: 25px;
     padding: .5%;
 }
+
+.nav-icon{
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(68deg) brightness(104%) contrast(101%);
+}
+
+.nav-pills .nav-link {
+    color: #1a2530; 
+}
+
+.navbar-nav .nav-link.active,.navbar-nav .nav-link.show {
+    color: #fe6a00;
+}
+
+.nav-link:focus,.nav-link:hover {
+    color: #fe6a00;
+}
+
+a {
+    color: #fe6a00;
+}
+
+.btn-link {
+    color:#1a2530;
+}
+
+.btn-check:checked+.btn,.btn.active,.btn.show,.btn:first-child:active,:not(.btn-check)+.btn:active,.btn-link:hover {
+    color: #fe6a00;
+}
+
+

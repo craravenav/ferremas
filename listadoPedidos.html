@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FERREMAS - Listado de Pedidos</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" >
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/ferremas.css" >
+</head>
+<body>
+    <!-- Navbar de FERREMAS-->
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="img/ferremas_logo.svg" alt="" width="100%" height="auto">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home
+                        <span class="visually-hidden">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Pedidos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pagos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi-person-circle"></i> Mi Perfil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Cerrar Sesión</a>
+                    </li>
+                </ul>              
+            </div>
+        </div>
+    </nav>
+
+    
+    <div class="container">
+        <!-- Breadcumbs del Sitio-->
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Panel Principal</a></li>
+            <li class="breadcrumb-item active">Listado de pedidos</li>
+        </ol>
+
+        <!-- Buscador -->
+        <div class="card text-center">
+            <h5 class="card-header">Parámetros de Búsqueda</h5>
+            <div class="card-body">
+            
+            </div>
+            <div class="card-footer">
+                <button type="button" class="btn btn-primary btn-sm">Refrescar Búsqueda</button>
+                <button type="button" class="btn btn-link">Limpiar Búsqueda</button>
+            </div>
+        </div>  
+
+        <br>
+
+        <!-- Pills Pedidos -->
+        <div class="card text-center">
+            <div class="card-header">
+                <ul class="nav nav-pills card-header-pills">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-bs-toggle="tab" href="#MisPedidos" aria-selected="true" role="tab">Mis Pedidos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#PedidosDisponibles" aria-selected="false" role="tab">Pedidos Disponibles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#PedidosTerminados" aria-selected="false" role="tab">Pedidos Terminados</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <div id="myTabContent" class="tab-content">
+                    <div class="tab-pane fade active show" id="MisPedidos" role="tabpanel">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                    <tr>
+                                    <th scope="row">3</th>
+                                    <td colspan="2">Larry the Bird</td>
+                                    <td>@twitter</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="PedidosDisponibles" role="tabpanel">
+                        <p>Pedidos Disponibles</p>
+                    </div>
+                    <div class="tab-pane fade" id="PedidosTerminados" role="tabpanel">
+                        <p>Pedidos Terminados</p>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JavaScript-->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/ferremas.js"></script>
+</body>
+</html>
