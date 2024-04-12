@@ -60,10 +60,25 @@
         <div class="card text-center">
             <h5 class="card-header">Parámetros de Búsqueda</h5>
             <div class="card-body">
-            
+                <div class="container">
+                    <div class="row g-3">
+                        <div class="col-auto">
+                            <label for="InputIdPedido" class="col-form-label"># Id del Pedido:</label>    
+                        </div>
+                        <div class="col-auto">
+                            <input type="text" class="form-control" id="InputIdPedido">
+                        </div>
+                        <div class="col-auto">
+                            <label for="FechaCreacion" class="col-form-label">Fecha de Creación:</label>    
+                        </div>
+                        <div class="col-auto">
+                            <input type="date" class="form-control" id="FechaCreacion">
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="card-footer">
-                <button type="button" class="btn btn-primary btn-sm">Refrescar Búsqueda</button>
+                <button type="button" class="btn btn-primary btn-sm">Aplicar</button>
                 <button type="button" class="btn btn-link">Limpiar Búsqueda</button>
             </div>
         </div>  
@@ -130,6 +145,6 @@
 
     <!-- Bootstrap JavaScript-->
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/ferremas.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </body>
 </html>
