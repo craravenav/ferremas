@@ -3,6 +3,16 @@ body#login{
     background-image: url("../img/background2.png");
     background-repeat: repeat;
 }
+body#registro{
+    background-color: rgb(39, 39, 39);
+    background-image: url("../img/background2.png");
+    background-repeat: repeat;
+    }
+    body#index{
+        background-color: rgb(39, 39, 39);
+        background-image: url("../img/background2.png");
+        background-repeat: repeat;
+        }
 
 #logo-row{
     padding-top: 20%;

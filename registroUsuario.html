@@ -1,18 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FERREMAS - Registrar de Usuario</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>FERREMAS - registro</title>
     <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/ferremas.css" rel="stylesheet">
-</head>
-<body>
-    HOLA MUNDO REGISTRO USUARIO
 
-    <!-- Bootstrap JavaScript-->
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/ferremas.js"></script>
-</body>
-</html>
+
+</head>
+
+<body id="registro">
+        <div class="container">
+            <div id ="logo-row" class="row justify-content-center">
+                <img id ="logo-img" src="img/ferremas_logo.svg" alt="">
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-6 align-self-center">
+                    <div class="card">
+                        <div class="card-header">
+                          Registro
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                              <div class="col-md-6">
+                                <form class="row g-3 needs-validation" novalidate>
+                                  <div class="col-md-12">
+                                      <label for="validationNombre" class="form-label">Nombre:</label>
+                                      <input type="text" class="form-control" id="validationNombre" required>
+                                      <div class="invalid-feedback">
+                                        Por favor, ingresa tu nombre.
+                                      </div>
+                                  </div>
+                                  <div class="col-md-12">
+                                      <label for="validationApellido" class="form-label">Apellido:</label>
+                                      <input type="text" class="form-control" id="validationApellido" required>
+                                      <div class="invalid-feedback">
+                                        Por favor, ingresa tu apellido.
+                                      </div>
+                                  </div>
+                                  <div class="col-md-12">
+                                      <label for="validationEmail" class="form-label">Correo electrónico:</label>
+                                      <input type="email" class="form-control" id="validationEmail" required>
+                                      <div class="invalid-feedback">
+                                        Por favor, ingresa un correo electrónico válido.
+                                      </div>
+                                  </div>
+                                  <div class="col-md-12">
+                                    <label for="validationPassword" class="form-label">Contraseña</label>
+                                    <input type="password" class="form-control" id="validationPassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+                                    <div class="invalid-feedback">
+                                      Debe contener al menos un número, una mayúscula, una minúscula y más de 8 caracteres.
+                                    </div>
+                                  </div>
+                                  <div class="col-md-12">
+                                    <label for="validationConfirmPassword" class="form-label">Confirmar Contraseña</label>
+                                    <input type="password" class="form-control" id="validationConfirmPassword" required>
+                                    <div class="invalid-feedback">
+                                      Las contraseñas deben coincidir.
+                                    </div>
+                                  </div>
+                                  <div class="col-12">
+                                    <button class="btn btn-primary" type="submit">Registrarse</button>
+                                  </div>
+                                </form>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="col-md-12">
+                                  ¿Ya tienes una cuenta? Inicia sesión <a href="login.html">aquí</a>.
+                                </div>
+                              </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+           
+        </div>
+        
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/ferremas.js"></script>
+    </body>
+    
+    </html>
