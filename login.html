@@ -22,7 +22,7 @@
             <div class="row justify-content-center">
                 <div class="col-6 align-self-center">
                     <div class="card">
-                        <div class="card-header">
+                        <div class="card-header"> 
                           Inicio de Sesión
                         </div>
                         <div class="card-body">
@@ -38,7 +38,7 @@
                                         <div class="invalid-feedback">
                                           Por favor, ingresa un email correcto.
                                         </div>
-                                      </div>
+                                      </div>                                      
                                   </div>
                                   <div class="col-md-12">
                                     <label for="validationPassword" class="form-label">Contraseña</label>
@@ -51,6 +51,26 @@
                                     <button class="btn btn-primary" type="submit">Iniciar Sesión</button>
                                   </div>
                                 </form>
+
+                            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                            <script>
+                            $(document).ready(function() {
+                            
+                                function verificarSesionYRedireccionar() {
+                                    var sesionIniciada = sessionStorage.getItem('sesionIniciada');
+                                    if (sesionIniciada) {
+                                        window.location.href = 'dashboard.html'; 
+                                    }
+                                }
+                                function animarEntradaFormulario() {
+                                    $('.card').fadeIn(1000); 
+                                }
+
+                                verificarSesionYRedireccionar();
+                                animarEntradaFormulario();
+                            });
+                            </script>
+
                               </div>
 
                               <div class="col-md-6">
@@ -59,13 +79,7 @@
                                 </div>                             
                                 <div class="col-md-12 d-grid gap-2 d-md-flex justify-content-md-end">
                                   <a class="btn btn-success" href="registroUsuario.html">Registrarse</a> 
-                                </div>
-                                <div class="col-12">
-                                  <a href="index.html"class="btn btn-primary">menu principal</a>
-                                </div>  
-                              </div>
-                            </div>
-
+                                </div> 
                         </div>
                     </div>
                 </div>

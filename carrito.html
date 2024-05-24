@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FERREMAS - Carrito de Compras</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/ferremas.css">
+</head>
+<body>
+    <!-- Navbar de FERREMAS-->
+    <nav class="navbar navbar-expand-md bg-primary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/ferremas_logo.svg" alt="" width="100%" height="auto">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="listadoPedidos.html">Pedidos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Carrito</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi-person-circle"></i> Mi Perfil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Cerrar Sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-3">
+        <h3>Carrito de Compras</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Producto</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Precio Unitario</th>
+                    <th scope="col">Subtotal</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Tornillos</td>
+                    <td><input type="number" value="3" min="1" class="form-control" style="width: 60px;"></td>
+                    <td>$150</td>
+                    <td>$450</td>
+                    <td><button class="btn btn-danger btn-sm"><i class="bi-trash"></i></button></td>
+                </tr>
+                <!-- Agrega más productos según sea necesario -->
+            </tbody>
+        </table>
+
+        <div class="d-flex justify-content-end">
+            <h4>Total: $450</h4>
+        </div>
+
+        <div class="d-flex justify-content-end mt-2">
+            <button class="btn btn-success">Proceder al Pago</button>
+        </div>
+    </div>
+
+    <!-- Bootstrap JavaScript-->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/carrito.js"></script>
+
+</body>
+</html>
