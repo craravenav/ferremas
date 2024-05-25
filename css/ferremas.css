@@ -60,6 +60,10 @@ a {
     background-color: #fe6a00;
 }
 
+.text-color-ferremas{
+    color: #fe6a00 !important;
+}
+
 .font-min{
     font-size: small !important;
 }
