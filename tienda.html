@@ -9,10 +9,11 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="css/ferremas.css" rel="stylesheet">
+
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md bg-primary" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-md bg-primary fixed-top" data-bs-theme="dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
                 <img src="img/ferremas_logo.svg" alt="" width="100%" height="auto">
@@ -39,7 +40,7 @@
                 </ul>
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <button type="button" href="#offcanvasExample" class="btn btn-primary  position-relative" data-bs-toggle="offcanvas" role="button">
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#ModalCarrito" class="btn btn-primary position-relative" role="button">
                             <i class="bi-cart-fill"></i>
                             <span id="carrito-contador" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger visually-hidden">
                                 0
@@ -57,66 +58,337 @@
         </div>
     </nav>        
 
-    <div class="container-fluid">
-        <!-- Breadcumbs del Sitio-->
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
-            <li class="breadcrumb-item active">Tienda</li>
-        </ol>
+    <div class="row mt-5">
+        <div class="container-fluid">
+            <!-- Breadcumbs del Sitio-->
+            <ol class="breadcrumb mt-5">
+                <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                <li class="breadcrumb-item active">Tienda</li>
+            </ol>
 
-        <!-- Carousel Promociones -->
-        <div class="container">
+            
+            <div class="container">
+                <!-- Carousel Promociones -->
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./img/pinturas.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/detodo.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/electricas.jpg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                </div>   
+                
+                <!-- Productos -->
+                <div class="row p-5">
+                    <div class="card producto m-2" style="width: 18rem;">
+                        <img src="./img/productos/atornillador-sm.jpg" class="card-img-top producto-imagen" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title producto-titulo">ATORNILLADOR 10MM C/BAT. DE LITIO 10.8V ENERGIZER</h5>
+                            <div class="d-flex justify-content-center">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star"></i>
+                                <i class="bi bi-star"></i>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between">
+                                <div class="p-2 precio producto-precio" >
+                                    $49.990
+                                </div>
+                                <div class="p-2">
+                                    <button class="btn btn-primary btnAgregarProducto" id="btnAgregarProducto">Agregar <i class="bi bi-cart-plus"></i></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
 
-            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="./img/pinturas.jpg" class="d-block w-100" alt="...">
+                    <div class="card producto m-2" style="width: 18rem;">
+                        <img src="./img/productos/porcelanato-sm.jpg" class="card-img-top producto-imagen" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title producto-titulo">PORCELANATO LIQUIDO EPOXI 0.900LT</h5>
+                            <div class="d-flex justify-content-center">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star"></i>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between">
+                                <div class="p-2 precio producto-precio" >
+                                    $29.990
+                                </div>
+                                <div class="p-2">
+                                    <button class="btn btn-primary btnAgregarProducto" id="btnAgregarProducto">Agregar <i class="bi bi-cart-plus"></i></button>
+                                </div>
+                            </div>
+                            
+                        </div>
                     </div>
-                    <div class="carousel-item">
-                        <img src="./img/detodo.jpg" class="d-block w-100" alt="...">
+
+                    <div class="card producto m-2" style="width: 18rem;">
+                        <img src="./img/productos/amoladora-sm.jpg" class="card-img-top producto-imagen" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title producto-titulo">AMOLADORA 840W MAKITA</h5>
+                            <div class="d-flex justify-content-center">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between">
+                                <div class="p-2 precio producto-precio" >
+                                    $79.990
+                                </div>
+                                <div class="p-2">
+                                    <button class="btn btn-primary btnAgregarProducto" id="btnAgregarProducto">Agregar <i class="bi bi-cart-plus"></i></button>
+                                </div>
+                            </div>
+                            
+                        </div>
                     </div>
-                    <div class="carousel-item">
-                        <img src="./img/electricas.jpg" class="d-block w-100" alt="...">
+
+                    <div class="card producto m-2" style="width: 18rem;">
+                        <img src="./img/productos/bordeadora-sm.jpg" class="card-img-top producto-imagen" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title producto-titulo">BORDEADORA 1000W TRAMONTINA</h5>
+                            <div class="d-flex justify-content-center">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between">
+                                <div class="p-2 precio producto-precio" >
+                                    $149.990
+                                </div>
+                                <div class="p-2">
+                                    <button class="btn btn-primary btnAgregarProducto" id="btnAgregarProducto">Agregar <i class="bi bi-cart-plus"></i></button>
+                                </div>
+                            </div>
+                            
+                        </div>
                     </div>
+
+                    <div class="card producto m-2" style="width: 18rem;">
+                        <img src="./img/productos/mecha-sm.jpg" class="card-img-top producto-imagen" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title producto-titulo">MECHA BROCA ESCALONADA 3PZ</h5>
+                            <div class="d-flex justify-content-center">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between">
+                                <div class="p-2 precio producto-precio" >
+                                    $5.990
+                                </div>
+                                <div class="p-2">
+                                    <button class="btn btn-primary btnAgregarProducto" id="btnAgregarProducto">Agregar <i class="bi bi-cart-plus"></i></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="card producto m-2" style="width: 18rem;">
+                        <img src="./img/productos/latex-acrilico-sm.jpg" class="card-img-top producto-imagen" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title producto-titulo">LATEX ACRILICO MAX 3.6LT AMARILLO GIRASOL AMAN</h5>
+                            <div class="d-flex justify-content-center">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between">
+                                <div class="p-2 precio producto-precio" >
+                                    $6.990
+                                </div>
+                                <div class="p-2">
+                                    <button class="btn btn-primary btnAgregarProducto" id="btnAgregarProducto">Agregar <i class="bi bi-cart-plus"></i></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="card producto m-2" style="width: 18rem;">
+                        <img src="./img/productos/latex-pintor-sm.jpg" class="card-img-top producto-imagen" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title producto-titulo">LATEX PINTOR 3.6LT BLANCO AMAN</h5>
+                            <div class="d-flex justify-content-center">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between">
+                                <div class="p-2 precio producto-precio" >
+                                    $8.990
+                                </div>
+                                <div class="p-2">
+                                    <button class="btn btn-primary btnAgregarProducto" id="btnAgregarProducto">Agregar <i class="bi bi-cart-plus"></i></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="card producto m-2" style="width: 18rem;">
+                        <img src="./img/productos/cocina-sm.jpg" class="card-img-top producto-imagen" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title producto-titulo">COCINA PARA CAMPING</h5>
+                            <div class="d-flex justify-content-center">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between">
+                                <div class="p-2 precio producto-precio" >
+                                    $24.990
+                                </div>
+                                <div class="p-2">
+                                    <button class="btn btn-primary btnAgregarProducto" id="btnAgregarProducto">Agregar <i class="bi bi-cart-plus"></i></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                </div>
+
+                    
+
+                
+
+
+            </div>
+            
+            
+
+        </div>
+    </div>
+    
+    <button type="button"  class="btn btn-primary">Primary</button>
+
+    <div class="modal fade modal-xl" id="ModalCarrito" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <!--INICIO MODAL CARRITO-->
+                    <div class="row d-flex justify-content-center align-items-center h-100">
+                        <div class="col-12">
+                            <div class="card-body p-0">
+                                <div class="row g-0">
+                                    <div class="col-lg-8">
+                                        <div class="p-5">
+                                            <!-- TITULO CARRITO -->
+                                            <div class="d-flex justify-content-between align-items-center mb-5">
+                                                <h1 class="fw-bold mb-0 text-black">Carrito de Compras</h1>
+                                                <h6 class="mb-0 text-muted" id="cantidad-articulos">0 Artículos</h6>
+                                            </div>
+
+                                            <!-- CARRITO DE PRODUCTOS -->
+                                            <div class="row mb-4 d-flex justify-content-between align-items-center" id="carrito-compras">
+                                            </div>
+
+                                            <hr class="my-4"> 
+
+                                            <div class="pt-5">
+                                                <button type="button" class="btn btn-link" data-bs-dismiss="modal"><i class="bi-arrow-left"></i> Volver a la tienda</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 bg-grey">
+                                        <div class="p-4">
+                                            <h4 class="fw-bold mb-5 mt-2 pt-1">Resumen de Compra</h4>
+                                            <hr class="my-4">
+                                            
+                                            <div class="d-flex justify-content-between mb-4">
+                                                <h5 class="text-uppercase">Sub Total</h5>
+                                                <h5 id="carrito-subtotal">$ 0</h5>
+                                            </div>
+
+                                            <hr class="my-4">
+                                            <h5 class="text-uppercase mb-2">Calculadora Envío <i class="bi bi-box-seam-fill"></i></h5>
+                                            <img class="fit-image mb-2" src="./img/chilexpress.png" width="160px" height="35px">
+                                           
+                                            <select class="form-select mb-2" id="countySelectDestinoRegion">
+                                                <option selected value="0">Seleccione Región</option>
+                                            </select>
+                                            <select class="form-select mb-2" id="countySelectDestinoComuna" disabled>
+                                                <option selected value="0">Seleccione Comuna</option>
+                                            </select>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="input-group input-group-sm mb-3">
+                                                    <input type="text" class="form-control" id="inputPesoCarrito">
+                                                    <span class="input-group-text" id="inputGroup-sizing-sm">Kg</span>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex justify-content-center ">
+                                                <button  type="button" class="btn btn-warning btn-sm" id="btnCalcularEnvio" disabled>Calcular envío</button>
+                                            </div>
+                                            <div class="d-flex justify-content-between mb-2 mt-4">
+                                                <h5 class="text-uppercase mb-3">Envío</h5>
+                                                <h5 id="envio-subtotal">$ 0</h5>
+                                            </div>
+
+                                            <hr class="my-4">
+                                            
+                                            <div class="d-flex justify-content-between mb-5">
+                                                <h5 class="text-uppercase">Total a Pagar</h5>
+                                                <h5 id="carrito-total">$ 0</h5>
+                                            </div>
+                                            
+                                            <div class="row justify-content-center mb-4 radio-group">
+                                                <div class="col-sm-4 col-5">
+                                                    <div class='radio selected mx-auto' data-value="dk"> <img class="fit-image" src="./img/metodos-pago/mastercard.jpeg" width="70px" height="35px"> </div>
+                                                </div>
+                                                <div class="col-sm-4 col-5">
+                                                    <div class='radio mx-auto' data-value="visa"> <img class="fit-image" src="./img/metodos-pago/visa.jpeg" width="70px" height="35px"> </div>
+                                                </div>
+                                                <div class="col-sm-4 col-5">
+                                                    <div class='radio mx-auto' data-value="master"> <img class="fit-image" src="./img/metodos-pago/paypal.jpeg" width="70px" height="35px"> </div>
+                                                </div>
+                                            <br>
+                                            </div>
+                                            <div class="d-grid gap-2">
+                                                <button  type="button" class="btn btn-dark btn-lg">Pagar  <i class="bi bi-credit-card"></i></button>
+                                            </div>
+                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--FIN-->
                 </div>
             </div>
-
-            
-            
-        </div>
-        
-
-    </div>
-
-
-    <!-- Offcanvas Carrito -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" data-bs-scroll="true" data-bs-backdrop="false">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Carrito de Compras</h5>
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-        <div>
-            Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
-        </div>
-        <div class="dropdown mt-3">
-            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
-            Dropdown button
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-        </div>
         </div>
     </div>
-
 
     <!-- Bootstrap JavaScript -->
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/ferremas.js"></script>
     <script src="js/tienda.js"></script>
+    <!-- Llamada a JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/jqueryFerremas.js"></script>
+
 </body>
 
 </html>
